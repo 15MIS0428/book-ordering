@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Srivani Vaidya
+ * Controller for book orders
+ */
 @RestController
 @RequestMapping("/v1/orders")
 public class OrderController {
@@ -18,6 +22,12 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * Controller to accept and place the order
+     * @param orderPlaceRequest DTO holding the order details
+     * @return response containing details about successful order placement
+     * @throws JsonProcessingException
+     */
     @PostMapping
     public ResponseEntity<String> placeOrder(@RequestBody OrderPlaceRequest orderPlaceRequest) throws JsonProcessingException {
         orderService.placeOrder(orderPlaceRequest);

@@ -6,6 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Srivani Vaidya
+ * Entity holding the mapping between book and order details
+ */
 @Entity
 @Table(name = "book_orders")
 @Data

@@ -9,7 +9,7 @@ public class AppConfig {
 
     @Bean
     public WebClient getWebclient(WebClient.Builder builder){
-        return builder.baseUrl("http://localhost:8080")
+        return builder.baseUrl("http://localhost:8080")   // URL for book-inventory application
                 .build();
     }
 

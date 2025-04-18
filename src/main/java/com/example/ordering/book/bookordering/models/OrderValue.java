@@ -6,6 +6,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author
+ * Entity holding the information about total value of each order
+ */
 @Table(name = "orders")
 @Entity
 @Data
