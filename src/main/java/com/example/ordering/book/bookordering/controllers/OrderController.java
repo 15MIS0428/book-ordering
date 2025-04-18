@@ -30,7 +30,7 @@ public class OrderController {
      */
     @PostMapping
     public ResponseEntity<String> placeOrder(@RequestBody OrderPlaceRequest orderPlaceRequest) throws JsonProcessingException {
-        orderService.placeOrder(orderPlaceRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Order placed successfully");
+        double totalOrderValue = orderService.placeOrder(orderPlaceRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).body("Order placed successfully for amount "+String.valueOf(totalOrderValue));
     }
 }

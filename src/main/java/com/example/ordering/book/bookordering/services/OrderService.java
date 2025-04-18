@@ -5,5 +5,5 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 public interface OrderService {
 
-    void placeOrder(final OrderPlaceRequest orderPlaceRequest) throws JsonProcessingException;
+    double placeOrder(final OrderPlaceRequest orderPlaceRequest) throws JsonProcessingException;
 }
